@@ -1,0 +1,113 @@
+:root {
+  font-family: "Inter Variable", sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 24px 32px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+article.clock {
+  padding: 6px 32px;
+  border: 6px solid #f7df1e;
+  border-radius: 16px;
+  background-color: #030712;
+  position: relative;
+}
+article.clock::before,
+article.clock::after {
+  content: "";
+  position: absolute;
+  width: 72px;
+  height: 6px;
+  background-color: #f7df1e;
+  bottom: -8px;
+  border-radius: 4px;
+}
+article.clock::before {
+  left: 72px;
+}
+article.clock::after {
+  right: 72px;
+}
+
+p#time {
+  font-family: "DSEG7 Classic Mini", sans-serif;
+  font-size: 40px;
+  color: #535bf2;
+}
+
+span.number {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+span.number::before {
+  content: "8";
+  position: absolute;
+  color: #646cff;
+  opacity: 0.1;
+}
+
+span.cycle {
+  font-size: 10px;
+  margin-left: 6px;
+}
+
+@media (min-width: 796px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  article.clock {
+    padding: 12px 64px;
+    border-width: 8px;
+  }
+  article.clock::before,
+  article.clock::after {
+    height: 8px;
+    bottom: -12px;
+  }
+
+  p#time {
+    font-size: 100px;
+  }
+
+  span.cycle {
+    font-size: 32px;
+  }
+}
